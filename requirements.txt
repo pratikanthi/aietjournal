@@ -15,7 +15,6 @@ django-webtest==1.7.7
 django-xmlrpc==0.1.5
 gunicorn==19.3.0
 Pillow==2.7.0
-psycopg2==2.6
 pyparsing==2.0.3
 python-dateutil==2.4.1
 pytz==2014.10
@@ -27,4 +26,5 @@ vobject==0.6.6
 waitress==0.8.9
 WebOb==1.4
 WebTest==2.0.18
+whitenoise==1.0.6
 Whoosh==2.6.0
