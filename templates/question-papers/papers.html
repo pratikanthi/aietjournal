@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+<html>
+	<head>
+	</head>	
+	
+	<body>
+		{% block content %}
+		
+		
+	<div class="container">
+		<div class="row">
+			    <div class="col-lg-12">
+				<ol class="breadcrumb">
+				    <li><a href="/">Question Papers</a></li>
+				    <li><a href="/questionpapers">Branches</a></li>
+				    <li><a href="../../">Semesters</a></li>
+				    <li><a href="../">Subjects</a></li>
+				    <li class="active">{{ subject_name.subject_name }}</li>
+				</ol>
+				<h1 class="page-header">
+				     {{ subject_name.subject_name }}
+				    <small>question papers </small> 
+				</h1>
+				
+			    </div>
+			</div>		
+		{% for paper in papers %}
+		<ul class="list-group">
+			<li class="list-group-item"><a href="media/{{ paper.qpaper }}" target="_blank">{{ paper.year }}</a><br/></li>
+			{% if not papers %}
+				<p>Nothing found</p>
+			{% endif %}
+		</ul>
+		{% endfor %}	
+		
+		<br/><br/><br/>
+		<div class="alert alert-info" role="alert"><b>Heads up!</b> all question papers are of the 2010 scheme</div>
+	</div>
+		{% endblock %}
+	</body>
+</html>

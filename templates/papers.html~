@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+<html>
+	<head>
+	</head>	
+	
+	<body>
+		{% block content %}
+		<h1>Welcome to the aietjournal</h1><br/>
+		<h3>{{ subject_name.subject_name }} question papers</h3>
+		{% for paper in papers %}
+			<a href="media/{{ paper.qpaper }}">{{ paper.year }}</a><br/>
+		{% endfor %}	
+		<br/><br/><br/>
+		<a href="../">Go back</a>
+		{% endblock %}
+	</body>
+</html>

@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+<html>
+	<head>
+	</head>
+	
+	<body>
+		{% block content %}
+		<h1>Welcome to the aietjournal</h1>
+		<h3>Please select your semester</h3>
+		{% for s in semester %}
+			<a href="{{ s.semester_no }}">{{ s.semester_name }}</a><br/>
+		{% endfor %}
+		{% endblock %}
+	</body>
+</html>

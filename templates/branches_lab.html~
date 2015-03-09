@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+<html>
+	<head>
+	</head>
+	
+	<body>
+	<div class="starter-template">
+		{% block content %}
+		<h1>Welcome to the aietjournal</h1>
+		<p class="lead" >Please select your branch </p>
+		{% for branch in branches %}
+			<a href="questionpapers/{{ branch.branch_code|lower }}">{{ branch.branch_name }}</a><br/>
+		{% endfor %}
+		{% endblock %}
+	</div>
+	</body>
+</html>

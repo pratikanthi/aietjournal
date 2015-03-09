@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+<html>
+	<head>
+	</head>	
+	
+	<body>
+		{% block content %}
+		<h1>Welcome to the aietjournal</h1><br/>
+		<a href="questionpapers">Question Papers</a>
+		<a href="#">Lab Manuals</a>
+		<a href="laboratory-software">LabSoftware</a>
+		<a href="#">Course Notes</a>
+		{% endblock %}
+	</body>
+</html>

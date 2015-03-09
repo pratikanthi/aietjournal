@@ -1,0 +1,147 @@
+{% extends "base.html" %}
+{% load static %}
+<html>
+	{% block content %}
+	<head>
+    <!-- jQuery -->
+    
+    
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="{% static "js/jquery-scrollto.js" %}"></script>
+    
+    <script>
+	(function ($) {
+		  $(document).ready(function(){
+
+		    // hide .navbar first
+		    $(".navbar").hide();
+
+		    // fade in .navbar
+		    $(function () {
+			$(window).scroll(function () {
+
+				 // set distance user needs to scroll before we start fadeIn
+			    if ($(this).scrollTop() > 550) {
+				$('.navbar').fadeIn();
+			    } else {
+				$('.navbar').fadeOut();
+			    }
+			});
+		    });
+
+		});
+		
+		
+		  }(jQuery));
+	
+	
+	
+     </script>
+	
+	
+	</head>	
+	
+	<body class="index-body" >
+		
+		
+		<div class="banner">
+			<div class="container index-container">
+			  <div class="jumbotron top-jumbo">
+			    <h1>Welcome to aiet journal</h1> 
+			    <p></p>
+			   
+				    <a class="btn btn-primary btn-md index-button" onclick="SmoothScroll()" role="button">Find out more</a>
+				    <a class="btn btn-success btn-md index-button" href="/blog" role="button">Read the blog</a>
+			    		  
+			  </div>
+			</div>				
+		</div>
+
+<!-- Page Content -->
+    <div class="container" id="navilinks">
+
+        <!-- Marketing Icons Section -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">
+                    
+                </h1>
+            </div>
+            <div class="col-md-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4><i class="fa fa-fw fa-check"></i>Question Papers</h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>Previous year(s) question papers for all branches and semesters in one place. We follow only the 2010 scheme</p>
+                        <a href="/questionpapers" class="btn btn-primary">Download now</a>
+                    </div>
+                </div>
+            </div>
+	    <div class="col-md-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4><i class="fa fa-fw fa-gears"></i> Laboratory Manuals</h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
+                        <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4><i class="fa fa-fw fa-file"></i> Course Notes</h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
+                        <a href="/course-notes" class="btn btn-primary">Download now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4><i class="fa fa-fw fa-wrench"></i> Laboratory Software Packages</h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
+                        <a href="/laboratory-software" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
+
+	<hr>
+
+        <!-- Call to Action Section -->
+	<h4><p style="float:left" class="col-lg-4">Subscribe to this journal and get 
+notified whenever we have something new</p></h4>
+	
+	<div class="row">
+      	  <div class="col-lg-6" >
+    	    <div class="input-group">
+              <input type="text" class="form-control" placeholder="Your email address">
+                <span class="input-group-btn">
+                  <button class="btn btn-danger subscribe-button" type="button" title="No Spam! We guarantee">Subscribe</button>
+      		</span>
+            </div><!-- /input-group -->
+           </div><!-- /.col-lg-6 -->
+         </div><!-- /.row -->
+        <hr>
+
+
+		
+	</body>
+	<script>
+		function SmoothScroll(){
+			$('#navilinks').ScrollTo({
+  				  duration: 1000,
+   				  
+			});
+		}
+    	</script>
+    	{% endblock %}
+</html>

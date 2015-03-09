@@ -1,0 +1,5 @@
+{{ object.title }}
+{{ object.branch }}
+{{ object.semester }}
+{{ object.subject }}
+{{ object.notes }}

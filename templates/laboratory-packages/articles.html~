@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+<html>
+	<head>
+	</head>
+	
+	<body>
+	{% block content %}
+				<!-- Page Content -->
+    <div class="container">
+
+        <!-- Page Heading/Breadcrumbs -->
+        <div class="row">
+		<ol class="breadcrumb">
+                    <li><a href="/">Laboratory Software</a></li>
+		    <li><a href="/laboratory-software">Branches</a></li>
+		    <li><a href="../../">Semesters</a></li>
+		    <li><a href="../">Article</a></li>
+                    <li class="active">{{ article.title }}</li>
+                </ol>
+            <div class="col-lg-12">
+                <h1 class="page-header">{{ article.title }}
+                   
+                </h1>
+                
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Content Row -->
+        <div class="row">
+            <div class="col-lg-12">
+           
+		{{ article.body | safe }}
+            </div>
+        </div>
+        <!-- /.row -->
+			
+	{% endblock %}
+	</body>
+</html>

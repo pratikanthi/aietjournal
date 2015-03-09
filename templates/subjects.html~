@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+<html>
+	<head>
+	</head>
+	
+	<body>
+		{% block content %}
+		<h1>Welcome to the aietjournal</h1>
+		<p>Select your subject</p>
+		{% for subject in subjects %}
+			<a href="{{ subject_slug }}">{{ subject_name }}</a><br/>
+		{% endfor %}
+		{% endblock %}
+	</body>
+</html>

@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+<html>
+	<head>
+	</head>
+	
+	<body>
+	{% block content %}
+ 	
+	<div class="container">
+		<ol class="breadcrumb">
+                    <li><a href="/">Question Papers</a>
+                    </li>
+                    <li class="active">Branches</li>
+                </ol>
+		<h1 class="page-header">
+                    <small>Please select your branch</small>
+                </h1>
+		
+		{% for branch in branches %}
+			<ul class="list-group">
+				<li class="list-group-item"><a href="questionpapers/{{ branch.branch_code|lower }}">{{ branch.branch_name }}</a><br/></li>
+			</ul>
+		{% endfor %}
+		
+	</div>
+	{% endblock %}	
+	</body>
+</html>
