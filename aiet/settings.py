@@ -134,6 +134,7 @@ TEMPLATE_DIRS = (
     os.path.join(BASE_DIR, 'templates/labmanuals'),
     os.path.join(BASE_DIR, 'templates/search'),
     os.path.join(BASE_DIR, 'templates/search/indexes/paper'),
+    os.path.join(BASE_DIR, 'templates/zinnia'),
 
 )
 
