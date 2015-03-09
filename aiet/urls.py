@@ -45,7 +45,8 @@ urlpatterns = patterns('',
     url(r'^comments/', include('django_comments.urls')),
 
     # Haystack URLs
-    url(r'^search/',include('haystack.urls'))
+    url(r'^search/',include('haystack.urls')),
+    url(r'', include('django.contrib.staticfiles.urls')),
 
 
 )
